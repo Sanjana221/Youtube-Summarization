@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Transcript to detailed notes converter</title>
+</head>
+<body>
+    <h1>"This is Youtube Video summarizer.It can summarie any video on youtube and provide you with important points.</h1>
+    <form action="{{ url_for('summarize') }}" method="post" class="search-form">
+        <div class="form-group">
+            <label for="video-link">
+            </label>
+            <input type="text" id="video-link" name="video-link"
+                placeholder="Paste link of Video" />
+        </div>
+
+        <button type="submit" class="btn btn-primary search-button">
+            Summarize
+        </button>
+        
+        <img src="{{ image }}" alt="Video image">
+
+        <p>{{summary}}</p>
+</body>
+</html>
